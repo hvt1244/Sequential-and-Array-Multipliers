@@ -1,0 +1,35 @@
+#set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25}
+#set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+#set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+#set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25}
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+set synthetic_library {dw_foundation.sldb standard.sldb}
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+
+read_verilog {array.v}
+current_design array_bin
+link
+check_design
+create_clock clock -name clock -period 15
+set_propagated_clock clk
+set_clock_uncertainty .25 clk
+
+
+set_max_delay 7.5 -from [all_inputs]
+set_max_delay 7.5 -to [all_outputs]
+#set_max_delay 2 -to sum
+#set_load 160 sum
+set_max_area 0
+#set_max_fanout
+#set_fix_hold clk
+compile -map_effort high
+report_cell
+report_net
+update_timing
+report_timing -max_paths 10
+report_area >> report_area.txt
+report_power >> report_power.txt
+write -hierarchy -format verilog -output array_netlist.v
+quit

@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 20:42:51 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               69
+Number of nets:               424
+Number of cells:              338
+Number of references:          24
+
+Combinational area:       3926.000000
+Noncombinational area:     354.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          4280.000000
+Total area:                 undefined
+1

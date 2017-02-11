@@ -1,0 +1,2503 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                        DC Professional (TM)
+                           DC Expert (TM)
+                            DC Ultra (TM)
+                       FloorPlan Manager (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                        Library Compiler (TM)
+                      DesignWare Developer (TM)
+                          DFT Compiler (TM)
+                            BSD Compiler
+                         Power Compiler (TM)
+
+           Version C-2009.06-SP5 for linux -- Jan 15, 2010
+              Copyright (c) 1988-2009 by Synopsys, Inc.
+                         ALL RIGHTS RESERVED
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+The above trademark notice does not imply that you are licensed to use 
+all of the listed products. You are licensed to use only those products 
+for which you have lawfully obtained a valid license key.
+
+Initializing...
+#set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+#set link_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+#set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_NOMIN25}
+#set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25}
+set target_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25
+set symbol_library {/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb}
+/apps/toshiba/sjsu/synopsys/tc240c/tc240c.workview.sdb
+set synthetic_library {dw_foundation.sldb standard.sldb}
+dw_foundation.sldb standard.sldb
+set_min_library /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25 -min_version /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Warning: Function '=' leaked 1 allocations for 16 bytes. (EQN-21)
+1
+read_verilog {seq.v}
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/gtech.db'
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/standard.sldb'
+  Loading link library 'tc240c'
+  Loading link library 'gtech'
+Loading verilog file '/home/th/thak8616/Desktop/SMUL321/seq.v'
+Detecting input file type automatically (-rtl or -netlist).
+Running DC verilog reader
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Loading db file '/apps/synopsys/SYNTH/libraries/syn/dw_foundation.sldb'
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Compiling source file /home/th/thak8616/Desktop/SMUL321/seq.v
+Warning:  Starting with the 2000.11-1 release, the Presto Verilog reader treats Verilog 'integer' types as signed; synthesized result may not match earlier versions of HDL Compiler. (VER-314)
+
+Statistics for case statements in always block at line 22 in file
+	'/home/th/thak8616/Desktop/SMUL321/seq.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine seq_adder line 22 in file
+		'/home/th/thak8616/Desktop/SMUL321/seq.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        b_reg        | Flip-flop |  32   |  N  | N  | N  | N  | N  | N  | N  |
+|        a_reg        | Flip-flop |  32   |  N  | N  | N  | N  | N  | N  | N  |
+|     states_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    prodt_end_reg    | Flip-flop |  65   |  N  | N  | N  | N  | N  | N  | N  |
+|      valid_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      count_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|       add_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/th/thak8616/Desktop/SMUL321/seq_adder.db:seq_adder'
+Loaded 8 designs.
+Current design is 'seq_adder'.
+seq_adder bit32 bit16 bit8 bit4 bit2 Add_full Add_half
+current_design seq_adder
+Current design is 'seq_adder'.
+{seq_adder}
+link
+
+  Linking design 'seq_adder'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  tc240c (library)            /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25
+
+1
+check_design
+Warning: In design 'seq_adder', a pin on submodule 'Ad32' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in32' is connected to logic 0. 
+Warning: In design 'seq_adder', cell 'C1446' does not drive any nets. (LINT-1)
+Warning: In design 'seq_adder', cell 'C1454' does not drive any nets. (LINT-1)
+Warning: In design 'seq_adder', port 'start' is not connected to any nets. (LINT-28)
+Warning: In design 'bit32', a pin on submodule 'A321' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in16' is connected to logic 0. 
+Warning: In design 'bit32', a pin on submodule 'A322' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in16' is connected to logic 1. 
+Warning: In design 'bit32', a pin on submodule 'A323' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in16' is connected to logic 0. 
+Warning: In design 'bit32', a pin on submodule 'A324' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in16' is connected to logic 1. 
+Warning: In design 'bit16', a pin on submodule 'A161' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in8' is connected to logic 0. 
+Warning: In design 'bit16', a pin on submodule 'A162' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in8' is connected to logic 1. 
+Warning: In design 'bit16', a pin on submodule 'A163' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in8' is connected to logic 0. 
+Warning: In design 'bit16', a pin on submodule 'A164' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in8' is connected to logic 1. 
+Warning: In design 'bit8', a pin on submodule 'A81' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in4' is connected to logic 0. 
+Warning: In design 'bit8', a pin on submodule 'A82' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in4' is connected to logic 1. 
+Warning: In design 'bit8', a pin on submodule 'A83' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in4' is connected to logic 0. 
+Warning: In design 'bit8', a pin on submodule 'A84' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in4' is connected to logic 1. 
+Warning: In design 'bit4', a pin on submodule 'A41' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in2' is connected to logic 0. 
+Warning: In design 'bit4', a pin on submodule 'A42' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in2' is connected to logic 1. 
+Warning: In design 'bit4', a pin on submodule 'A43' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in2' is connected to logic 0. 
+Warning: In design 'bit4', a pin on submodule 'A44' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in2' is connected to logic 1. 
+Warning: In design 'bit2', a pin on submodule 'A1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in' is connected to logic 0. 
+Warning: In design 'bit2', a pin on submodule 'A2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in' is connected to logic 1. 
+Warning: In design 'bit2', a pin on submodule 'A3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in' is connected to logic 0. 
+Warning: In design 'bit2', a pin on submodule 'A4' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'c_in' is connected to logic 1. 
+Information: Design 'seq_adder' has multiply instantiated designs. Use the '-multiple_designs' switch for more information. (LINT-78)
+1
+create_clock clock -name clock -period 6
+1
+set_propagated_clock clk
+Warning: Can't find object 'clk' in design 'seq_adder'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+set_clock_uncertainty .25 clk
+Warning: Can't find object 'clk' in design 'seq_adder'. (UID-95)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
+0
+#set_max_delay 3 -from [all_inputs]
+#set_max_delay 3 -to [all_outputs]
+#set_max_delay 2 -to sum
+#set_load 160 sum
+set_max_area 1000
+1
+#set_max_fanout
+#set_fix_hold clk
+compile -map_effort high
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library       |      Version       | Available |
+============================================================================
+| Basic DW Building Blocks                | C-2009.06-DWBB_0912 |    *     |
+| Licensed DW Building Blocks             | C-2009.06-DWBB_0912 |    *     |
+============================================================================
+
+
+Information: There are 24 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+  Loading target library 'tc240c'
+Warning: Operating condition WCCOM25 set on design seq_adder has different process,
+voltage and temperatures parameters than the parameters at which target library 
+tc240c is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Add_half_0'
+  Processing 'Add_full_0'
+  Processing 'bit2_0'
+  Processing 'bit4_0'
+  Processing 'bit8_0'
+  Processing 'bit16_0'
+  Processing 'bit32'
+  Processing 'seq_adder'
+Information: Added key list 'DesignWare' to design 'seq_adder'. (DDB-72)
+Information: The register 'prodt_end_reg[64]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'seq_adder_DW01_dec_0'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09   22886.5      2.16      96.5    1862.2                          
+    0:00:09   22886.5      2.16      96.5    1862.2                          
+    0:00:10   23107.5      2.19      97.5    1241.1                          
+    0:00:13   23267.0      0.07       1.2       0.0                          
+    0:00:15   15293.5      1.14      25.3       0.0                          
+    0:00:17   15412.0      0.64      13.1       0.0                          
+    0:00:17   15374.0      0.60      11.9       0.0                          
+    0:00:17   15384.5      0.55      11.1       0.0                          
+    0:00:18   15389.0      0.54      10.8       0.0                          
+    0:00:18   15394.5      0.54       9.7       0.0                          
+    0:00:18   15396.0      0.49       9.3       0.0                          
+    0:00:18   15403.0      0.54      10.0       0.0                          
+    0:00:18   15400.5      0.44       7.9       0.0                          
+    0:00:18   15415.0      0.42       6.9       0.0                          
+    0:00:18   15427.5      0.39       6.7       0.0                          
+    0:00:18   15434.0      0.37       6.2       0.0                          
+    0:00:18   15438.0      0.35       5.8       0.0                          
+    0:00:18   15443.5      0.33       5.5       0.0                          
+    0:00:18   15447.5      0.28       4.5       0.0                          
+    0:00:19   15452.0      0.27       4.5       0.0                          
+    0:00:19   15451.5      0.26       3.9       0.0                          
+    0:00:19   15464.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:19   15466.5      0.24       3.7       0.0                          
+    0:00:20   15567.5      0.02       0.4       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:20   15567.5      0.02       0.4       0.0                          
+    0:00:20   15568.5      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 1000)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:20   15568.5      0.00       0.0       0.0                          
+    0:00:20   15568.5      0.00       0.0       0.0                          
+    0:00:20   15521.5      0.06       1.0       0.0                          
+    0:00:20   15505.5      0.02       0.1       0.0                          
+    0:00:20   15505.5      0.02       0.1       0.0                          
+    0:00:20   15505.5      0.02       0.1       0.0                          
+    0:00:20   15505.5      0.02       0.1       0.0                          
+    0:00:20   15506.0      0.00       0.0       0.0                          
+    0:00:20   15345.0      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:20   15318.5      0.51       5.2       0.0                          
+    0:00:21   15274.0      0.00       0.0       0.0                          
+    0:00:21   15240.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15238.5      0.05       0.7       0.0                          
+    0:00:21   15242.0      0.00       0.0       0.0                          
+    0:00:22   15239.5      0.00       0.0       0.0                          
+    0:00:23   15239.0      0.00       0.0       0.0                          
+    0:00:23   15238.0      0.00       0.0       0.0                          
+    0:00:23   15238.0      0.00       0.0       0.0                          
+    0:00:23   15237.5      0.00       0.0       0.0                          
+    0:00:23   15237.5      0.00       0.0       0.0                          
+    0:00:23   15237.5      0.00       0.0       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15232.0      0.03       0.5       0.0                          
+    0:00:23   15234.5      0.00       0.0       0.0                          
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+
+  Optimization Complete
+  ---------------------
+1
+report_cell
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : cell
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 01:29:47 2016
+****************************************
+
+Attributes:
+   BO - reference allows boundary optimization
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Ad32                      bit32                           13681.500000
+                                                                    h
+U306                      CAOR1X1         tc240c          2.000000  
+U307                      CAOR2X1         tc240c          2.500000  
+U308                      CAOR2X1         tc240c          2.500000  
+U309                      CAOR2X1         tc240c          2.500000  
+U310                      CAOR2X1         tc240c          2.500000  
+U311                      CAOR2X1         tc240c          2.500000  
+U312                      CAOR2X1         tc240c          2.500000  
+U313                      CAOR2X1         tc240c          2.500000  
+U314                      CAOR2X1         tc240c          2.500000  
+U315                      CAOR2X1         tc240c          2.500000  
+U316                      CAOR2X1         tc240c          2.500000  
+U317                      CAOR2X1         tc240c          2.500000  
+U318                      CAOR2X1         tc240c          2.500000  
+U319                      CAOR2X1         tc240c          2.500000  
+U320                      CAOR2X1         tc240c          2.500000  
+U321                      CAOR2X1         tc240c          2.500000  
+U322                      CAOR2X1         tc240c          2.500000  
+U323                      CAOR2X1         tc240c          2.500000  
+U324                      CAOR2X1         tc240c          2.500000  
+U325                      CAOR2X1         tc240c          2.500000  
+U326                      CAOR2X1         tc240c          2.500000  
+U327                      CAOR2X1         tc240c          2.500000  
+U329                      CAOR2X1         tc240c          2.500000  
+U331                      CAOR2X1         tc240c          2.500000  
+U334                      CAOR2X1         tc240c          2.500000  
+U339                      CAOR2X1         tc240c          2.500000  
+U340                      CAOR2X1         tc240c          2.500000  
+U341                      CAOR2X1         tc240c          2.500000  
+U342                      CAOR2X1         tc240c          2.500000  
+U343                      CAOR2X1         tc240c          2.500000  
+U344                      CAOR2X1         tc240c          2.500000  
+U345                      CAOR2X1         tc240c          2.500000  
+U346                      CAOR2X1         tc240c          2.500000  
+U347                      CAOR2X1         tc240c          2.500000  
+U348                      CAOR2X1         tc240c          2.500000  
+U349                      CAOR2X1         tc240c          2.500000  
+U350                      CAOR2X1         tc240c          2.500000  
+U351                      CAOR2X1         tc240c          2.500000  
+U352                      CAOR2X1         tc240c          2.500000  
+U353                      CAOR2X1         tc240c          2.500000  
+U354                      CAOR2X1         tc240c          2.500000  
+U355                      CAOR2X1         tc240c          2.500000  
+U356                      CAOR2X1         tc240c          2.500000  
+U357                      CAOR2X1         tc240c          2.500000  
+U358                      CAOR2X1         tc240c          2.500000  
+U359                      CAOR2X1         tc240c          2.500000  
+U360                      CAOR2X1         tc240c          2.500000  
+U361                      CAOR2X1         tc240c          2.500000  
+U362                      CAOR2X1         tc240c          2.500000  
+U363                      CAOR2X1         tc240c          2.500000  
+U364                      CAOR2X1         tc240c          2.500000  
+U365                      CAOR2X1         tc240c          2.500000  
+U366                      CAOR2X1         tc240c          2.500000  
+U367                      CAOR2X1         tc240c          2.500000  
+U368                      CAOR2X1         tc240c          2.500000  
+U400                      CAOR2X1         tc240c          2.500000  
+U401                      CNR8X1          tc240c          4.000000  
+U402                      CNR8X1          tc240c          4.000000  
+U403                      CNR8X1          tc240c          4.000000  
+U404                      CNR8X1          tc240c          4.000000  
+U405                      CND2IX1         tc240c          1.500000  
+U406                      CND2X1          tc240c          1.000000  
+U407                      CENX1           tc240c          2.000000  
+U408                      CND2X1          tc240c          1.000000  
+U409                      CNR2X1          tc240c          1.000000  
+U410                      CND2X1          tc240c          1.000000  
+U411                      CAN2X1          tc240c          1.500000  
+U412                      COND1X1         tc240c          2.000000  
+U413                      COND1X1         tc240c          2.000000  
+U414                      COND1X1         tc240c          2.000000  
+U415                      COND1X1         tc240c          2.000000  
+U416                      COND1X1         tc240c          2.000000  
+U417                      COND1X1         tc240c          2.000000  
+U418                      CIVX2           tc240c          1.000000  
+U419                      CIVX2           tc240c          1.000000  
+U420                      CIVX2           tc240c          1.000000  
+U421                      CIVX2           tc240c          1.000000  
+U422                      CIVX2           tc240c          1.000000  
+U423                      CIVX1           tc240c          1.000000  
+U424                      CANR2XL         tc240c          2.000000  
+U425                      CANR2XL         tc240c          2.000000  
+U426                      CANR2XL         tc240c          2.000000  
+U427                      CANR2XL         tc240c          2.000000  
+U428                      CANR2XL         tc240c          2.000000  
+U429                      CANR2XL         tc240c          2.000000  
+U430                      CANR2XL         tc240c          2.000000  
+U431                      CANR2XL         tc240c          2.000000  
+U432                      CANR2XL         tc240c          2.000000  
+U433                      CANR2XL         tc240c          2.000000  
+U434                      CANR2XL         tc240c          2.000000  
+U435                      CIVX2           tc240c          1.000000  
+U436                      CAOR2XL         tc240c          2.500000  
+U437                      CAOR2XL         tc240c          2.500000  
+U438                      CAOR2XL         tc240c          2.500000  
+U439                      CAOR2XL         tc240c          2.500000  
+U440                      CAOR2XL         tc240c          2.500000  
+U441                      CAOR2XL         tc240c          2.500000  
+U442                      CIVX2           tc240c          1.000000  
+U443                      CIVX2           tc240c          1.000000  
+U444                      CIVX2           tc240c          1.000000  
+U445                      CIVX2           tc240c          1.000000  
+U446                      COND1XL         tc240c          1.500000  
+U447                      COND1XL         tc240c          1.500000  
+U448                      COND1XL         tc240c          1.500000  
+U449                      COND1XL         tc240c          1.500000  
+U450                      COND1XL         tc240c          1.500000  
+U451                      COND1XL         tc240c          1.500000  
+U452                      COND1XL         tc240c          1.500000  
+U453                      CND2X1          tc240c          1.000000  
+U454                      CND3XL          tc240c          1.500000  
+U455                      CAN8X1          tc240c          4.000000  
+U456                      CAN8X1          tc240c          4.000000  
+U457                      CAN8X1          tc240c          4.000000  
+U458                      CAN8X1          tc240c          4.000000  
+U459                      CND2X1          tc240c          1.000000  
+U460                      CNR2X1          tc240c          1.000000  
+U461                      CNR2X1          tc240c          1.000000  
+U462                      CNR2X1          tc240c          1.000000  
+U463                      CND2X1          tc240c          1.000000  
+U464                      COND1XL         tc240c          1.500000  
+U465                      COND1XL         tc240c          1.500000  
+U466                      COND1XL         tc240c          1.500000  
+U467                      COND1XL         tc240c          1.500000  
+U468                      COND1XL         tc240c          1.500000  
+U469                      COND1XL         tc240c          1.500000  
+U470                      COND1XL         tc240c          1.500000  
+U471                      COND1XL         tc240c          1.500000  
+U472                      COND1XL         tc240c          1.500000  
+U473                      COND1XL         tc240c          1.500000  
+U474                      COND1XL         tc240c          1.500000  
+U475                      COND1XL         tc240c          1.500000  
+U476                      COND1XL         tc240c          1.500000  
+U477                      COND1XL         tc240c          1.500000  
+U478                      COND1XL         tc240c          1.500000  
+U479                      COND1XL         tc240c          1.500000  
+U480                      CANR2X1         tc240c          2.000000  
+U481                      CIVX2           tc240c          1.000000  
+U482                      CND2X1          tc240c          1.000000  
+U483                      COND1XL         tc240c          1.500000  
+U484                      CANR2XL         tc240c          2.000000  
+U485                      COND1XL         tc240c          1.500000  
+U486                      CNR2X1          tc240c          1.000000  
+U487                      CNR2X1          tc240c          1.000000  
+U488                      COND1XL         tc240c          1.500000  
+U489                      CANR2X1         tc240c          2.000000  
+U490                      COND1XL         tc240c          1.500000  
+U491                      CANR2X1         tc240c          2.000000  
+U492                      COND1XL         tc240c          1.500000  
+U493                      CANR2X1         tc240c          2.000000  
+U494                      COND1XL         tc240c          1.500000  
+U495                      CANR2X1         tc240c          2.000000  
+U496                      COND1XL         tc240c          1.500000  
+U497                      CANR2X1         tc240c          2.000000  
+U498                      COND1XL         tc240c          1.500000  
+U499                      CANR2X1         tc240c          2.000000  
+U500                      COND1XL         tc240c          1.500000  
+U501                      CANR2X1         tc240c          2.000000  
+U502                      COND1XL         tc240c          1.500000  
+U503                      CANR2X1         tc240c          2.000000  
+U504                      COND1XL         tc240c          1.500000  
+U505                      CANR2X1         tc240c          2.000000  
+U506                      COND1XL         tc240c          1.500000  
+U507                      CANR2X1         tc240c          2.000000  
+U508                      COND1XL         tc240c          1.500000  
+U509                      CANR2X1         tc240c          2.000000  
+U510                      COND1XL         tc240c          1.500000  
+U511                      CANR2X1         tc240c          2.000000  
+U512                      COND1XL         tc240c          1.500000  
+U513                      CANR2X1         tc240c          2.000000  
+U514                      COND1XL         tc240c          1.500000  
+U515                      CANR2X1         tc240c          2.000000  
+U516                      COND1XL         tc240c          1.500000  
+U517                      CANR2X1         tc240c          2.000000  
+U518                      COND1XL         tc240c          1.500000  
+U519                      CANR2X1         tc240c          2.000000  
+U520                      COND1XL         tc240c          1.500000  
+U521                      CANR2X1         tc240c          2.000000  
+U522                      COND1XL         tc240c          1.500000  
+U523                      CANR2X1         tc240c          2.000000  
+U524                      COND1XL         tc240c          1.500000  
+U525                      CANR2X1         tc240c          2.000000  
+U526                      COND1XL         tc240c          1.500000  
+U527                      CANR2X1         tc240c          2.000000  
+U528                      COND1XL         tc240c          1.500000  
+U529                      CANR2X1         tc240c          2.000000  
+U530                      COND1XL         tc240c          1.500000  
+U531                      CANR2X1         tc240c          2.000000  
+U532                      COND1XL         tc240c          1.500000  
+U533                      CANR2X1         tc240c          2.000000  
+U534                      COND1XL         tc240c          1.500000  
+U535                      CANR2X1         tc240c          2.000000  
+U536                      COND1XL         tc240c          1.500000  
+U537                      CANR2X1         tc240c          2.000000  
+U538                      COND1XL         tc240c          1.500000  
+U539                      CANR2X1         tc240c          2.000000  
+U540                      COND1XL         tc240c          1.500000  
+U541                      CANR2X1         tc240c          2.000000  
+U542                      COND1XL         tc240c          1.500000  
+U543                      CANR2X1         tc240c          2.000000  
+U544                      COND1XL         tc240c          1.500000  
+U545                      CANR2X1         tc240c          2.000000  
+U546                      COND1XL         tc240c          1.500000  
+U547                      CANR2X1         tc240c          2.000000  
+U548                      CNR2IX1         tc240c          1.500000  
+U549                      CNR2IX1         tc240c          1.500000  
+U550                      CNR2IX1         tc240c          1.500000  
+U551                      CNR2IX1         tc240c          1.500000  
+U552                      COND2X1         tc240c          2.000000  
+U553                      COND2X1         tc240c          2.000000  
+U554                      CNR2X1          tc240c          1.000000  
+U555                      CNR2X1          tc240c          1.000000  
+U556                      CNR2X1          tc240c          1.000000  
+U557                      CENX1           tc240c          2.000000  
+U558                      CENX1           tc240c          2.000000  
+U559                      CENX1           tc240c          2.000000  
+U560                      CENX1           tc240c          2.000000  
+U561                      CND4X1          tc240c          2.000000  
+U562                      COND2X1         tc240c          2.000000  
+U563                      COND2X1         tc240c          2.000000  
+U564                      CANR2X1         tc240c          2.000000  
+U565                      CNR2X1          tc240c          1.000000  
+U566                      CEOX1           tc240c          2.000000  
+U567                      CEOX1           tc240c          2.000000  
+U568                      CENX1           tc240c          2.000000  
+U569                      CENX1           tc240c          2.000000  
+U570                      CENX1           tc240c          2.000000  
+U571                      CENX1           tc240c          2.000000  
+U572                      CENX1           tc240c          2.000000  
+U573                      CENX1           tc240c          2.000000  
+U574                      CENX1           tc240c          2.000000  
+U575                      CENX1           tc240c          2.000000  
+U576                      CENX1           tc240c          2.000000  
+U577                      CENX1           tc240c          2.000000  
+U578                      CENX1           tc240c          2.000000  
+U579                      CENX1           tc240c          2.000000  
+U580                      CENX1           tc240c          2.000000  
+U581                      CENX1           tc240c          2.000000  
+U582                      CENX1           tc240c          2.000000  
+U583                      CENX1           tc240c          2.000000  
+U584                      CENX1           tc240c          2.000000  
+U585                      CENX1           tc240c          2.000000  
+U586                      CENX1           tc240c          2.000000  
+U587                      CENX1           tc240c          2.000000  
+U588                      CENX1           tc240c          2.000000  
+U589                      CENX1           tc240c          2.000000  
+U590                      CENX1           tc240c          2.000000  
+U591                      CENX1           tc240c          2.000000  
+U592                      CENX1           tc240c          2.000000  
+U593                      CENX1           tc240c          2.000000  
+U594                      CENX1           tc240c          2.000000  
+U595                      CENX1           tc240c          2.000000  
+U596                      CENX1           tc240c          2.000000  
+U597                      CENX1           tc240c          2.000000  
+U598                      CENX1           tc240c          2.000000  
+U599                      CENX1           tc240c          2.000000  
+U600                      CENX1           tc240c          2.000000  
+U601                      CENX1           tc240c          2.000000  
+U602                      CENX1           tc240c          2.000000  
+U603                      CENX1           tc240c          2.000000  
+U604                      CENX1           tc240c          2.000000  
+U605                      CENX1           tc240c          2.000000  
+U606                      COND1XL         tc240c          1.500000  
+U607                      COND1XL         tc240c          1.500000  
+U608                      CEOX1           tc240c          2.000000  
+U609                      CEOX1           tc240c          2.000000  
+U610                      COND1XL         tc240c          1.500000  
+U611                      CND2X1          tc240c          1.000000  
+U612                      COND1XL         tc240c          1.500000  
+U613                      COND1XL         tc240c          1.500000  
+U614                      CND2X1          tc240c          1.000000  
+U615                      COND1XL         tc240c          1.500000  
+U616                      COND3X1         tc240c          2.000000  
+U617                      COND3X1         tc240c          2.000000  
+U618                      CAN8X1          tc240c          4.000000  
+U619                      CENX1           tc240c          2.000000  
+U620                      CENX1           tc240c          2.000000  
+U621                      CENX1           tc240c          2.000000  
+U622                      CAN8X1          tc240c          4.000000  
+U623                      CENX1           tc240c          2.000000  
+U624                      CENX1           tc240c          2.000000  
+U625                      CENX1           tc240c          2.000000  
+U626                      CAN8X1          tc240c          4.000000  
+U627                      CENX1           tc240c          2.000000  
+U628                      CENX1           tc240c          2.000000  
+U629                      CENX1           tc240c          2.000000  
+U630                      CAN8X1          tc240c          4.000000  
+U631                      CENX1           tc240c          2.000000  
+U632                      CENX1           tc240c          2.000000  
+U633                      CENX1           tc240c          2.000000  
+U634                      CAN8X1          tc240c          4.000000  
+U635                      CENX1           tc240c          2.000000  
+U636                      CENX1           tc240c          2.000000  
+U637                      CND3XL          tc240c          1.500000  
+U638                      CNR2IX1         tc240c          1.500000  
+U639                      CNR2IX1         tc240c          1.500000  
+U640                      CNR2IX1         tc240c          1.500000  
+U641                      CNR2IX1         tc240c          1.500000  
+U642                      CNR2IX1         tc240c          1.500000  
+U643                      CNR2IX1         tc240c          1.500000  
+U644                      CNR2IX1         tc240c          1.500000  
+U645                      CNR2IX1         tc240c          1.500000  
+U646                      CNR2IX1         tc240c          1.500000  
+U647                      CNR2IX1         tc240c          1.500000  
+U648                      CNR2IX1         tc240c          1.500000  
+U649                      CNR2IX1         tc240c          1.500000  
+U650                      CNR2IX1         tc240c          1.500000  
+U651                      CNR2IX1         tc240c          1.500000  
+U652                      CNR2IX1         tc240c          1.500000  
+U653                      CNR2IX1         tc240c          1.500000  
+U654                      CNR2IX1         tc240c          1.500000  
+U655                      CNR2IX1         tc240c          1.500000  
+U656                      CNR2IX1         tc240c          1.500000  
+U657                      CNR2IX1         tc240c          1.500000  
+U658                      CNR2IX1         tc240c          1.500000  
+U659                      COND2X1         tc240c          2.000000  
+U660                      COND1XL         tc240c          1.500000  
+U661                      CND2X1          tc240c          1.000000  
+U662                      COND1XL         tc240c          1.500000  
+U663                      CND2X1          tc240c          1.000000  
+U664                      CAOR2XL         tc240c          2.500000  
+U665                      CIVXL           tc240c          1.000000  
+U666                      CANR2X1         tc240c          2.000000  
+U667                      CANR2X1         tc240c          2.000000  
+U668                      CANR2X1         tc240c          2.000000  
+U669                      CANR2X1         tc240c          2.000000  
+U670                      CANR2X1         tc240c          2.000000  
+U671                      CANR2X1         tc240c          2.000000  
+U672                      CANR2X1         tc240c          2.000000  
+U673                      CANR2X1         tc240c          2.000000  
+U674                      COND3X1         tc240c          2.000000  
+U675                      CANR2XL         tc240c          2.000000  
+U676                      COND1XL         tc240c          1.500000  
+U677                      CIVX2           tc240c          1.000000  
+U678                      CANR2X1         tc240c          2.000000  
+U679                      CANR2X1         tc240c          2.000000  
+U680                      CANR2X1         tc240c          2.000000  
+U681                      CANR2X1         tc240c          2.000000  
+U682                      CENX1           tc240c          2.000000  
+U683                      CENX1           tc240c          2.000000  
+U684                      CENX1           tc240c          2.000000  
+U685                      CIVX2           tc240c          1.000000  
+U686                      CANR2X1         tc240c          2.000000  
+U687                      CIVX2           tc240c          1.000000  
+U688                      CANR2X1         tc240c          2.000000  
+U689                      CANR2X1         tc240c          2.000000  
+U690                      CANR2XL         tc240c          2.000000  
+U691                      CAOR2XL         tc240c          2.500000  
+U692                      CANR2XL         tc240c          2.000000  
+U693                      CIVX1           tc240c          1.000000  
+U694                      CIVX1           tc240c          1.000000  
+U695                      CIVX1           tc240c          1.000000  
+U696                      CIVX1           tc240c          1.000000  
+U697                      CIVX1           tc240c          1.000000  
+U698                      CIVX1           tc240c          1.000000  
+U699                      CIVX1           tc240c          1.000000  
+U700                      CIVX1           tc240c          1.000000  
+U701                      CIVX1           tc240c          1.000000  
+U702                      CIVX1           tc240c          1.000000  
+U703                      CIVX1           tc240c          1.000000  
+U704                      CIVX1           tc240c          1.000000  
+U705                      CIVX1           tc240c          1.000000  
+U706                      CIVX1           tc240c          1.000000  
+U707                      CIVX1           tc240c          1.000000  
+U708                      CIVX1           tc240c          1.000000  
+U709                      CIVX1           tc240c          1.000000  
+U710                      CIVX1           tc240c          1.000000  
+U711                      CIVX1           tc240c          1.000000  
+U712                      CND2IX1         tc240c          1.500000  
+U713                      CND2IX1         tc240c          1.500000  
+U714                      CIVX2           tc240c          1.000000  
+U715                      CIVX2           tc240c          1.000000  
+U716                      CND2IX1         tc240c          1.500000  
+U717                      CND2IX1         tc240c          1.500000  
+U718                      CND2IX1         tc240c          1.500000  
+U719                      CND2IX1         tc240c          1.500000  
+U720                      CND2IX1         tc240c          1.500000  
+U721                      CND2IX1         tc240c          1.500000  
+U722                      CND2IX1         tc240c          1.500000  
+U723                      CND2IX1         tc240c          1.500000  
+U724                      CND2IX1         tc240c          1.500000  
+U725                      CND2IX1         tc240c          1.500000  
+U726                      CND2IX1         tc240c          1.500000  
+U727                      CND2IX1         tc240c          1.500000  
+U728                      CND2IX1         tc240c          1.500000  
+U729                      CND2IX1         tc240c          1.500000  
+U730                      CND2IX1         tc240c          1.500000  
+U731                      CND2IX1         tc240c          1.500000  
+U732                      CND2IX1         tc240c          1.500000  
+U733                      CND2IX1         tc240c          1.500000  
+U734                      CND2IX1         tc240c          1.500000  
+U735                      CND2IX1         tc240c          1.500000  
+U736                      CND2IX1         tc240c          1.500000  
+U737                      CND2IX1         tc240c          1.500000  
+U738                      CND2IX1         tc240c          1.500000  
+U739                      CND2IX1         tc240c          1.500000  
+U740                      CND2IX1         tc240c          1.500000  
+U741                      CND2IX1         tc240c          1.500000  
+U742                      CND2IX1         tc240c          1.500000  
+U743                      CND2IX1         tc240c          1.500000  
+U744                      CND2IX1         tc240c          1.500000  
+U745                      CND2IX1         tc240c          1.500000  
+U746                      CND2IX1         tc240c          1.500000  
+U747                      CND2IX1         tc240c          1.500000  
+U748                      CND2IX1         tc240c          1.500000  
+U749                      CND2IX1         tc240c          1.500000  
+U750                      CND2IX1         tc240c          1.500000  
+U751                      CND2IX1         tc240c          1.500000  
+U752                      CND2IX1         tc240c          1.500000  
+U753                      CND2IX1         tc240c          1.500000  
+U754                      CND2IX1         tc240c          1.500000  
+U755                      CND2IX1         tc240c          1.500000  
+U756                      CND2IX1         tc240c          1.500000  
+U757                      CND2IX1         tc240c          1.500000  
+U758                      CND2IX1         tc240c          1.500000  
+U759                      CND2IX1         tc240c          1.500000  
+U760                      CIVX2           tc240c          1.000000  
+U761                      CND2IX1         tc240c          1.500000  
+U762                      CND2IX1         tc240c          1.500000  
+U763                      CIVX2           tc240c          1.000000  
+U764                      CIVX2           tc240c          1.000000  
+U765                      CND2IX1         tc240c          1.500000  
+U766                      CIVX2           tc240c          1.000000  
+U767                      CND2IX1         tc240c          1.500000  
+U768                      CIVX2           tc240c          1.000000  
+U769                      CND2IX1         tc240c          1.500000  
+U770                      CIVX2           tc240c          1.000000  
+U771                      CND2IX1         tc240c          1.500000  
+U772                      CND2IX1         tc240c          1.500000  
+U773                      CND2IX1         tc240c          1.500000  
+U774                      CND2IX1         tc240c          1.500000  
+U775                      CIVX2           tc240c          1.000000  
+U776                      CIVX2           tc240c          1.000000  
+U777                      CIVX2           tc240c          1.000000  
+U778                      CIVX2           tc240c          1.000000  
+U779                      CIVX2           tc240c          1.000000  
+U780                      CIVX2           tc240c          1.000000  
+U781                      CIVX2           tc240c          1.000000  
+U782                      CIVX2           tc240c          1.000000  
+U783                      CIVX2           tc240c          1.000000  
+U784                      CIVX2           tc240c          1.000000  
+U785                      CIVX2           tc240c          1.000000  
+U786                      CIVX2           tc240c          1.000000  
+U787                      CIVX2           tc240c          1.000000  
+U788                      CIVX2           tc240c          1.000000  
+U789                      CIVX2           tc240c          1.000000  
+U790                      CIVX2           tc240c          1.000000  
+U791                      CIVX2           tc240c          1.000000  
+U792                      CIVX2           tc240c          1.000000  
+U793                      CIVX2           tc240c          1.000000  
+U794                      CIVX2           tc240c          1.000000  
+U795                      CIVX2           tc240c          1.000000  
+U796                      CIVX2           tc240c          1.000000  
+U797                      CIVX2           tc240c          1.000000  
+U798                      CIVX2           tc240c          1.000000  
+U799                      CIVX2           tc240c          1.000000  
+U800                      CIVX2           tc240c          1.000000  
+U801                      CIVX2           tc240c          1.000000  
+U802                      CIVX2           tc240c          1.000000  
+U803                      CIVX2           tc240c          1.000000  
+U804                      CIVX2           tc240c          1.000000  
+U805                      CIVX2           tc240c          1.000000  
+U806                      CIVX2           tc240c          1.000000  
+U807                      CIVX2           tc240c          1.000000  
+U808                      CIVX2           tc240c          1.000000  
+U809                      CIVX2           tc240c          1.000000  
+U810                      CIVX2           tc240c          1.000000  
+U811                      CIVX2           tc240c          1.000000  
+U812                      CIVX2           tc240c          1.000000  
+a_reg[0]                  CFD1QX4         tc240c          6.000000  n
+a_reg[1]                  CFD1QX1         tc240c          5.000000  n
+a_reg[2]                  CFD1QX1         tc240c          5.000000  n
+a_reg[3]                  CFD1QXL         tc240c          3.500000  n
+a_reg[4]                  CFD1QX1         tc240c          5.000000  n
+a_reg[5]                  CFD1QX1         tc240c          5.000000  n
+a_reg[6]                  CFD1QXL         tc240c          3.500000  n
+a_reg[7]                  CFD1QXL         tc240c          3.500000  n
+a_reg[8]                  CFD1QX1         tc240c          5.000000  n
+a_reg[9]                  CFD1QXL         tc240c          3.500000  n
+a_reg[10]                 CFD1QXL         tc240c          3.500000  n
+a_reg[11]                 CFD1QXL         tc240c          3.500000  n
+a_reg[12]                 CFD1QXL         tc240c          3.500000  n
+a_reg[13]                 CFD1QX1         tc240c          5.000000  n
+a_reg[14]                 CFD1QXL         tc240c          3.500000  n
+a_reg[15]                 CFD1QXL         tc240c          3.500000  n
+a_reg[16]                 CFD1QX1         tc240c          5.000000  n
+a_reg[17]                 CFD1QXL         tc240c          3.500000  n
+a_reg[18]                 CFD1QXL         tc240c          3.500000  n
+a_reg[19]                 CFD1QXL         tc240c          3.500000  n
+a_reg[20]                 CFD1QXL         tc240c          3.500000  n
+a_reg[21]                 CFD1QXL         tc240c          3.500000  n
+a_reg[22]                 CFD1QXL         tc240c          3.500000  n
+a_reg[23]                 CFD1QXL         tc240c          3.500000  n
+a_reg[24]                 CFD1QX1         tc240c          5.000000  n
+a_reg[25]                 CFD1QXL         tc240c          3.500000  n
+a_reg[26]                 CFD1QXL         tc240c          3.500000  n
+a_reg[27]                 CFD1QXL         tc240c          3.500000  n
+a_reg[28]                 CFD1QXL         tc240c          3.500000  n
+a_reg[29]                 CFD1QXL         tc240c          3.500000  n
+a_reg[30]                 CFD1QXL         tc240c          3.500000  n
+a_reg[31]                 CFD1QXL         tc240c          3.500000  n
+add_reg                   CFD1QXL         tc240c          3.500000  n
+b_reg[0]                  CFD1XL          tc240c          4.000000  n
+b_reg[1]                  CFD1QXL         tc240c          3.500000  n
+b_reg[2]                  CFD1QXL         tc240c          3.500000  n
+b_reg[3]                  CFD1QXL         tc240c          3.500000  n
+b_reg[4]                  CFD1QXL         tc240c          3.500000  n
+b_reg[5]                  CFD1QXL         tc240c          3.500000  n
+b_reg[6]                  CFD1QXL         tc240c          3.500000  n
+b_reg[7]                  CFD1QXL         tc240c          3.500000  n
+b_reg[8]                  CFD1QXL         tc240c          3.500000  n
+b_reg[9]                  CFD1QXL         tc240c          3.500000  n
+b_reg[10]                 CFD1QXL         tc240c          3.500000  n
+b_reg[11]                 CFD1QXL         tc240c          3.500000  n
+b_reg[12]                 CFD1QXL         tc240c          3.500000  n
+b_reg[13]                 CFD1QXL         tc240c          3.500000  n
+b_reg[14]                 CFD1QXL         tc240c          3.500000  n
+b_reg[15]                 CFD1QXL         tc240c          3.500000  n
+b_reg[16]                 CFD1QXL         tc240c          3.500000  n
+b_reg[17]                 CFD1QXL         tc240c          3.500000  n
+b_reg[18]                 CFD1QXL         tc240c          3.500000  n
+b_reg[19]                 CFD1QXL         tc240c          3.500000  n
+b_reg[20]                 CFD1QXL         tc240c          3.500000  n
+b_reg[21]                 CFD1QXL         tc240c          3.500000  n
+b_reg[22]                 CFD1QXL         tc240c          3.500000  n
+b_reg[23]                 CFD1QXL         tc240c          3.500000  n
+b_reg[24]                 CFD1QXL         tc240c          3.500000  n
+b_reg[25]                 CFD1QXL         tc240c          3.500000  n
+b_reg[26]                 CFD1QXL         tc240c          3.500000  n
+b_reg[27]                 CFD1QXL         tc240c          3.500000  n
+b_reg[28]                 CFD1QXL         tc240c          3.500000  n
+b_reg[29]                 CFD1QXL         tc240c          3.500000  n
+b_reg[30]                 CFD1QXL         tc240c          3.500000  n
+b_reg[31]                 CFD1XL          tc240c          4.000000  n
+count_reg[0]              CFD1XL          tc240c          4.000000  n
+count_reg[1]              CFD1QXL         tc240c          3.500000  n
+count_reg[2]              CFD1QXL         tc240c          3.500000  n
+count_reg[3]              CFD1QXL         tc240c          3.500000  n
+count_reg[4]              CFD1QXL         tc240c          3.500000  n
+count_reg[5]              CFD1XL          tc240c          4.000000  n
+count_reg[6]              CFD1QXL         tc240c          3.500000  n
+count_reg[7]              CFD1QXL         tc240c          3.500000  n
+count_reg[8]              CFD1QXL         tc240c          3.500000  n
+count_reg[9]              CFD1QXL         tc240c          3.500000  n
+count_reg[10]             CFD1QXL         tc240c          3.500000  n
+count_reg[11]             CFD1QXL         tc240c          3.500000  n
+count_reg[12]             CFD1QXL         tc240c          3.500000  n
+count_reg[13]             CFD1QXL         tc240c          3.500000  n
+count_reg[14]             CFD1QXL         tc240c          3.500000  n
+count_reg[15]             CFD1QXL         tc240c          3.500000  n
+count_reg[16]             CFD1QXL         tc240c          3.500000  n
+count_reg[17]             CFD1QXL         tc240c          3.500000  n
+count_reg[18]             CFD1QXL         tc240c          3.500000  n
+count_reg[19]             CFD1QXL         tc240c          3.500000  n
+count_reg[20]             CFD1QXL         tc240c          3.500000  n
+count_reg[21]             CFD1QXL         tc240c          3.500000  n
+count_reg[22]             CFD1QXL         tc240c          3.500000  n
+count_reg[23]             CFD1QXL         tc240c          3.500000  n
+count_reg[24]             CFD1QXL         tc240c          3.500000  n
+count_reg[25]             CFD1QXL         tc240c          3.500000  n
+count_reg[26]             CFD1QXL         tc240c          3.500000  n
+count_reg[27]             CFD1QXL         tc240c          3.500000  n
+count_reg[28]             CFD1QXL         tc240c          3.500000  n
+count_reg[29]             CFD1QXL         tc240c          3.500000  n
+count_reg[30]             CFD1QXL         tc240c          3.500000  n
+count_reg[31]             CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[0]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[1]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[2]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[3]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[4]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[5]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[6]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[7]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[8]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[9]          CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[10]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[11]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[12]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[13]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[14]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[15]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[16]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[17]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[18]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[19]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[20]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[21]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[22]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[23]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[24]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[25]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[26]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[27]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[28]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[29]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[30]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[31]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[32]         CFD1QX4         tc240c          6.000000  n
+prodt_end_reg[33]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[34]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[35]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[36]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[37]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[38]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[39]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[40]         CFD1X1          tc240c          5.500000  n
+prodt_end_reg[41]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[42]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[43]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[44]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[45]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[46]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[47]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[48]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[49]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[50]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[51]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[52]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[53]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[54]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[55]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[56]         CFD1QX1         tc240c          5.000000  n
+prodt_end_reg[57]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[58]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[59]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[60]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[61]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[62]         CFD1QXL         tc240c          3.500000  n
+prodt_end_reg[63]         CFD1QXL         tc240c          3.500000  n
+states_reg[0]             CFD1QXL         tc240c          3.500000  n
+states_reg[1]             CFD1QXL         tc240c          3.500000  n
+sub_72                    seq_adder_DW01_dec_1            127.000000
+                                                                    BO, h
+valid_reg                 CFD1QXL         tc240c          3.500000  n
+--------------------------------------------------------------------------------
+Total 634 cells                                           15234.500000
+1
+report_net
+ 
+****************************************
+Report : net
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 01:29:47 2016
+****************************************
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Attributes:
+   dr - drc disabled
+
+Net                 Fanout     Fanin      Load   Resistance    Pins   Attributes
+--------------------------------------------------------------------------------
+*Logic0*                18         1    151.59         0.00      19   dr
+N55                      1         1      8.79         0.00       2   
+N56                      1         1      8.79         0.00       2   
+N57                      1         1      9.38         0.00       2   
+N58                      1         1      9.38         0.00       2   
+N59                      1         1      9.38         0.00       2   
+N60                      1         1      9.38         0.00       2   
+N61                      1         1     17.00         0.00       2   
+N62                      1         1      9.38         0.00       2   
+N63                      1         1     17.00         0.00       2   
+N64                      1         1      9.38         0.00       2   
+N65                      1         1      9.38         0.00       2   
+N66                      1         1      9.38         0.00       2   
+N67                      1         1      9.38         0.00       2   
+N68                      1         1      9.38         0.00       2   
+N69                      1         1      9.38         0.00       2   
+N70                      1         1      9.38         0.00       2   
+N71                      1         1      9.38         0.00       2   
+N72                      1         1      9.38         0.00       2   
+N73                      1         1      9.38         0.00       2   
+N74                      1         1      9.38         0.00       2   
+N75                      1         1      9.38         0.00       2   
+N76                      1         1      9.38         0.00       2   
+N77                      1         1      9.38         0.00       2   
+N78                      1         1      9.38         0.00       2   
+N79                      1         1      9.38         0.00       2   
+N80                      1         1      9.38         0.00       2   
+N81                      1         1      9.38         0.00       2   
+N82                      1         1      9.38         0.00       2   
+N83                      1         1      9.38         0.00       2   
+N84                      1         1      9.38         0.00       2   
+N85                      1         1      9.38         0.00       2   
+N86                      1         1      9.38         0.00       2   
+N326                     3         1     28.64         0.00       4   
+N327                     1         1      2.74         0.00       2   
+a[0]                     4         1     68.08         0.00       5   
+a[1]                     4         1     36.44         0.00       5   
+a[2]                     4         1     36.44         0.00       5   
+a[3]                     4         1     36.44         0.00       5   
+a[4]                     4         1     39.48         0.00       5   
+a[5]                     4         1     36.08         0.00       5   
+a[6]                     4         1     36.44         0.00       5   
+a[7]                     4         1     39.13         0.00       5   
+a[8]                     4         1     36.32         0.00       5   
+a[9]                     4         1     39.48         0.00       5   
+a[10]                    4         1     36.44         0.00       5   
+a[11]                    4         1     39.13         0.00       5   
+a[12]                    4         1     39.48         0.00       5   
+a[13]                   66         1    495.34         0.00      67   
+a[14]                    4         1     39.13         0.00       5   
+a[15]                    4         1     39.13         0.00       5   
+a[16]                    4         1     39.37         0.00       5   
+a[17]                    4         1     39.48         0.00       5   
+a[18]                    4         1     39.48         0.00       5   
+a[19]                    4         1     39.13         0.00       5   
+a[20]                    4         1     39.48         0.00       5   
+a[21]                    4         1     39.13         0.00       5   
+a[22]                    4         1     39.13         0.00       5   
+a[23]                    4         1     39.13         0.00       5   
+a[24]                    4         1     39.13         0.00       5   
+a[25]                    4         1     39.13         0.00       5   
+a[26]                    4         1     39.13         0.00       5   
+a[27]                    4         1     39.13         0.00       5   
+a[28]                    4         1     39.13         0.00       5   
+a[29]                    4         1     39.13         0.00       5   
+a[30]                    4         1     39.13         0.00       5   
+a[31]                    4         1     39.13         0.00       5   
+add                      4         1     45.24         0.00       5   
+b[1]                     2         1     24.78         0.00       3   
+b[2]                     2         1     24.78         0.00       3   
+b[3]                     2         1     24.78         0.00       3   
+b[4]                     2         1     24.78         0.00       3   
+b[5]                     2         1     24.78         0.00       3   
+b[6]                     2         1     24.78         0.00       3   
+b[7]                     2         1     24.78         0.00       3   
+b[8]                     2         1     24.78         0.00       3   
+b[9]                     2         1     24.78         0.00       3   
+b[10]                    2         1     24.78         0.00       3   
+b[11]                    2         1     24.78         0.00       3   
+b[12]                    2         1     24.78         0.00       3   
+b[13]                    2         1     24.78         0.00       3   
+b[14]                    2         1     24.78         0.00       3   
+b[15]                    2         1     24.78         0.00       3   
+b[16]                    2         1     24.78         0.00       3   
+b[17]                    2         1     24.78         0.00       3   
+b[18]                    2         1     24.78         0.00       3   
+b[19]                    2         1     24.78         0.00       3   
+b[20]                    2         1     24.78         0.00       3   
+b[21]                    2         1     24.78         0.00       3   
+b[22]                    2         1     24.78         0.00       3   
+b[23]                    2         1     24.78         0.00       3   
+b[24]                    2         1     24.78         0.00       3   
+b[25]                    2         1     24.78         0.00       3   
+b[26]                    2         1     24.99         0.00       3   
+b[27]                    2         1     24.99         0.00       3   
+b[28]                    2         1     24.78         0.00       3   
+b[29]                    2         1     24.78         0.00       3   
+b[30]                    2         1     24.78         0.00       3   
+clock                  164         1    575.93         0.00     165   dr
+count[0]                 3         1     45.05         0.00       4   
+count[1]                 4         1     51.17         0.00       5   
+count[2]                 5         1     59.52         0.00       6   
+count[3]                 4         1     51.29         0.00       5   
+count[4]                 5         1     58.44         0.00       6   
+count[5]                 4         1     43.04         0.00       5   
+count[6]                 5         1     52.54         0.00       6   
+count[7]                 4         1     42.81         0.00       5   
+count[8]                 5         1     51.31         0.00       6   
+count[9]                 4         1     41.90         0.00       5   
+count[10]                5         1     48.55         0.00       6   
+count[11]                4         1     41.43         0.00       5   
+count[12]                5         1     48.51         0.00       6   
+count[13]                4         1     42.17         0.00       5   
+count[14]                5         1     49.25         0.00       6   
+count[15]                4         1     40.93         0.00       5   
+count[16]                5         1     48.63         0.00       6   
+count[17]                4         1     40.40         0.00       5   
+count[18]                5         1     50.33         0.00       6   
+count[19]                4         1     42.70         0.00       5   
+count[20]                5         1     53.02         0.00       6   
+count[21]                4         1     42.81         0.00       5   
+count[22]                5         1     50.42         0.00       6   
+count[23]                4         1     41.90         0.00       5   
+count[24]                4         1     37.10         0.00       5   
+count[25]                4         1     40.78         0.00       5   
+count[26]                4         1     41.29         0.00       5   
+count[27]                4         1     42.02         0.00       5   
+count[28]                4         1     42.11         0.00       5   
+count[29]                4         1     41.40         0.00       5   
+count[30]                4         1     40.49         0.00       5   
+count[31]                3         1     32.54         0.00       4   
+mcand[0]                 2         1     22.75         0.00       3   
+mcand[1]                 2         1     22.75         0.00       3   
+mcand[2]                 2         1     22.75         0.00       3   
+mcand[3]                 2         1     22.75         0.00       3   
+mcand[4]                 2         1     25.67         0.00       3   
+mcand[5]                 2         1     22.75         0.00       3   
+mcand[6]                 2         1     22.75         0.00       3   
+mcand[7]                 2         1     25.67         0.00       3   
+mcand[8]                 2         1     22.75         0.00       3   
+mcand[9]                 2         1     25.67         0.00       3   
+mcand[10]                2         1     22.75         0.00       3   
+mcand[11]                2         1     25.67         0.00       3   
+mcand[12]                2         1     25.67         0.00       3   
+mcand[13]                2         1     25.67         0.00       3   
+mcand[14]                2         1     25.67         0.00       3   
+mcand[15]                2         1     25.67         0.00       3   
+mcand[16]                2         1     25.67         0.00       3   
+mcand[17]                2         1     25.67         0.00       3   
+mcand[18]                2         1     25.67         0.00       3   
+mcand[19]                2         1     25.67         0.00       3   
+mcand[20]                2         1     25.67         0.00       3   
+mcand[21]                2         1     25.67         0.00       3   
+mcand[22]                2         1     25.67         0.00       3   
+mcand[23]                2         1     25.67         0.00       3   
+mcand[24]                2         1     25.67         0.00       3   
+mcand[25]                2         1     25.67         0.00       3   
+mcand[26]                2         1     25.67         0.00       3   
+mcand[27]                2         1     25.67         0.00       3   
+mcand[28]                2         1     25.67         0.00       3   
+mcand[29]                2         1     25.67         0.00       3   
+mcand[30]                2         1     25.67         0.00       3   
+mcand[31]                2         1     25.67         0.00       3   
+mlier[0]                 3         1     45.41         0.00       4   
+mlier[1]                 3         1     34.37         0.00       4   
+mlier[2]                 3         1     33.99         0.00       4   
+mlier[3]                 3         1     33.99         0.00       4   
+mlier[4]                 3         1     33.99         0.00       4   
+mlier[5]                 3         1     33.99         0.00       4   
+mlier[6]                 3         1     33.99         0.00       4   
+mlier[7]                 3         1     33.99         0.00       4   
+mlier[8]                 3         1     33.99         0.00       4   
+mlier[9]                 3         1     33.99         0.00       4   
+mlier[10]                3         1     33.99         0.00       4   
+mlier[11]                3         1     33.99         0.00       4   
+mlier[12]                3         1     33.99         0.00       4   
+mlier[13]                3         1     33.99         0.00       4   
+mlier[14]                3         1     33.99         0.00       4   
+mlier[15]                3         1     33.99         0.00       4   
+mlier[16]                3         1     33.99         0.00       4   
+mlier[17]                3         1     33.99         0.00       4   
+mlier[18]                3         1     33.99         0.00       4   
+mlier[19]                3         1     33.99         0.00       4   
+mlier[20]                3         1     33.99         0.00       4   
+mlier[21]                3         1     33.99         0.00       4   
+mlier[22]                3         1     33.99         0.00       4   
+mlier[23]                3         1     33.99         0.00       4   
+mlier[24]                3         1     33.99         0.00       4   
+mlier[25]                3         1     33.99         0.00       4   
+mlier[26]                3         1     33.79         0.00       4   
+mlier[27]                3         1     33.79         0.00       4   
+mlier[28]                3         1     33.99         0.00       4   
+mlier[29]                3         1     33.99         0.00       4   
+mlier[30]                3         1     33.99         0.00       4   
+mlier[31]                2         1     35.35         0.00       3   
+n12                      2         1     26.76         0.00       3   
+n13                      2         1     26.76         0.00       3   
+n94                      1         1      3.99         0.00       2   
+n95                     10         1     66.12         0.00      11   
+n96                      9         1     62.37         0.00      10   
+n97                      1         1      3.99         0.00       2   
+n98                      1         1      3.99         0.00       2   
+n99                      1         1      3.99         0.00       2   
+n100                     1         1      3.99         0.00       2   
+n101                     1         1      3.99         0.00       2   
+n102                     1         1      3.99         0.00       2   
+n103                     1         1     10.33         0.00       2   
+n104                     1         1     10.33         0.00       2   
+n105                     1         1      3.99         0.00       2   
+n106                     1         1      3.99         0.00       2   
+n107                     1         1      3.99         0.00       2   
+n108                     1         1      3.99         0.00       2   
+n109                     1         1     10.33         0.00       2   
+n110                     1         1     10.33         0.00       2   
+n111                     1         1     10.33         0.00       2   
+n112                     1         1     10.33         0.00       2   
+n113                     1         1      3.99         0.00       2   
+n114                     1         1      3.99         0.00       2   
+n115                     1         1      3.99         0.00       2   
+n116                     1         1      3.99         0.00       2   
+n117                     1         1      3.99         0.00       2   
+n118                     1         1      3.99         0.00       2   
+n119                     1         1      3.99         0.00       2   
+n120                     1         1      3.99         0.00       2   
+n121                     1         1      3.99         0.00       2   
+n122                     1         1      3.99         0.00       2   
+n123                     1         1      3.99         0.00       2   
+n124                     1         1      3.99         0.00       2   
+n125                     1         1      3.99         0.00       2   
+n126                     1         1      3.99         0.00       2   
+n127                     1         1      3.99         0.00       2   
+n128                     4         1     39.17         0.00       5   
+n129                     1         1      9.26         0.00       2   
+n130                     1         1     10.06         0.00       2   
+n131                    39         1    321.44         0.00      40   
+n132                     1         1      3.99         0.00       2   
+n133                     1         1      3.99         0.00       2   
+n134                     1         1      3.99         0.00       2   
+n135                     1         1      3.99         0.00       2   
+n136                     1         1      3.99         0.00       2   
+n137                     1         1      3.99         0.00       2   
+n138                     1         1      3.99         0.00       2   
+n139                     1         1      3.99         0.00       2   
+n140                     1         1      3.99         0.00       2   
+n141                     1         1      3.99         0.00       2   
+n142                     1         1      3.99         0.00       2   
+n143                     1         1      3.99         0.00       2   
+n144                     1         1      3.99         0.00       2   
+n145                     1         1      3.99         0.00       2   
+n146                     1         1      3.99         0.00       2   
+n147                     1         1      3.99         0.00       2   
+n148                     1         1      3.99         0.00       2   
+n149                     1         1      3.99         0.00       2   
+n150                     1         1      3.99         0.00       2   
+n151                     1         1      3.99         0.00       2   
+n152                     1         1      3.99         0.00       2   
+n153                     1         1      3.99         0.00       2   
+n154                     1         1      3.99         0.00       2   
+n155                     1         1      3.99         0.00       2   
+n156                     1         1      3.99         0.00       2   
+n157                     1         1      3.99         0.00       2   
+n158                     1         1      3.99         0.00       2   
+n159                     1         1      3.99         0.00       2   
+n160                     1         1      3.99         0.00       2   
+n161                     1         1      7.81         0.00       2   
+n163                     3         1     35.16         0.00       4   
+n164                     3         1     26.14         0.00       4   
+n165                     2         1     13.03         0.00       3   
+n166                     1         1      3.99         0.00       2   
+n167                     2         1     16.32         0.00       3   
+n169                     2         1     25.85         0.00       3   
+n170                     1         1     10.06         0.00       2   
+n172                     1         1      3.99         0.00       2   
+n173                     3         1     30.09         0.00       4   
+n174                     1         1      9.08         0.00       2   
+n175                     1         1      6.66         0.00       2   
+n176                     1         1      6.98         0.00       2   
+n177                     1         1      7.39         0.00       2   
+n178                     1         1      8.02         0.00       2   
+n179                     1         1      6.66         0.00       2   
+n180                     1         1      7.01         0.00       2   
+n181                     1         1      7.38         0.00       2   
+n182                     1         1      8.03         0.00       2   
+n183                     1         1      6.66         0.00       2   
+n184                     1         1      6.98         0.00       2   
+n185                     1         1      7.39         0.00       2   
+n186                     1         1      8.02         0.00       2   
+n187                     1         1      6.66         0.00       2   
+n188                     1         1      7.01         0.00       2   
+n189                     1         1      7.38         0.00       2   
+n190                     1         1      8.03         0.00       2   
+n191                     1         1      6.66         0.00       2   
+n192                     1         1      6.98         0.00       2   
+n193                     1         1      7.39         0.00       2   
+n194                     1         1      8.02         0.00       2   
+n195                     1         1      6.66         0.00       2   
+n196                     1         1      7.01         0.00       2   
+n197                     1         1      7.38         0.00       2   
+n198                     1         1      8.03         0.00       2   
+n199                     1         1      6.66         0.00       2   
+n200                     1         1      6.98         0.00       2   
+n201                     1         1      7.39         0.00       2   
+n202                     1         1      8.02         0.00       2   
+n203                     1         1      6.66         0.00       2   
+n204                     1         1      7.01         0.00       2   
+n205                     1         1      7.38         0.00       2   
+n206                     1         1      8.03         0.00       2   
+n207                     1         1      6.66         0.00       2   
+n208                     1         1      6.98         0.00       2   
+n209                     1         1      7.39         0.00       2   
+n210                     1         1      8.02         0.00       2   
+n211                     1         1      6.66         0.00       2   
+n212                     1         1      7.01         0.00       2   
+n213                     1         1      7.38         0.00       2   
+n214                     1         1      8.03         0.00       2   
+n215                     1         1      6.66         0.00       2   
+n216                     1         1      6.98         0.00       2   
+n217                     1         1      7.39         0.00       2   
+n218                     1         1      8.02         0.00       2   
+n219                     1         1      6.66         0.00       2   
+n220                     1         1      7.01         0.00       2   
+n221                     1         1      7.38         0.00       2   
+n222                     1         1      8.03         0.00       2   
+n223                     1         1      9.49         0.00       2   
+n224                     1         1      9.41         0.00       2   
+n225                     1         1      6.66         0.00       2   
+n226                     1         1      6.98         0.00       2   
+n227                     1         1      7.39         0.00       2   
+n228                     1         1      8.02         0.00       2   
+n229                     1         1      6.66         0.00       2   
+n230                     1         1      7.01         0.00       2   
+n231                     1         1      7.38         0.00       2   
+n232                     1         1      8.03         0.00       2   
+n233                     1         1      6.66         0.00       2   
+n234                     1         1      6.98         0.00       2   
+n235                     1         1      7.39         0.00       2   
+n236                     1         1      8.02         0.00       2   
+n237                     1         1      6.66         0.00       2   
+n238                     1         1      7.01         0.00       2   
+n239                     1         1      7.38         0.00       2   
+n240                     1         1      8.03         0.00       2   
+n241                     1         1      6.66         0.00       2   
+n242                     1         1      6.98         0.00       2   
+n243                     1         1      7.39         0.00       2   
+n244                     1         1      8.02         0.00       2   
+n245                     1         1      6.66         0.00       2   
+n246                     1         1      7.01         0.00       2   
+n247                     1         1      7.38         0.00       2   
+n248                     1         1      8.03         0.00       2   
+n249                     1         1      8.72         0.00       2   
+n250                     1         1      8.83         0.00       2   
+n251                     1         1      9.46         0.00       2   
+n252                     1         1     10.17         0.00       2   
+n253                     1         1      2.74         0.00       2   
+n254                     1         1      2.74         0.00       2   
+n255                     1         1      2.74         0.00       2   
+n256                     1         1      2.74         0.00       2   
+n257                     1         1      2.74         0.00       2   
+n258                     1         1      2.74         0.00       2   
+n259                     1         1      2.74         0.00       2   
+n260                     1         1      7.88         0.00       2   
+n261                     1         1      7.88         0.00       2   
+n262                     1         1      2.74         0.00       2   
+n263                     1         1      2.74         0.00       2   
+n264                     1         1      2.74         0.00       2   
+n265                     1         1      2.74         0.00       2   
+n266                     1         1      7.88         0.00       2   
+n267                     1         1      7.88         0.00       2   
+n268                     1         1      7.88         0.00       2   
+n269                     1         1      7.88         0.00       2   
+n270                     1         1      2.74         0.00       2   
+n271                     1         1      2.74         0.00       2   
+n272                     1         1      2.74         0.00       2   
+n273                     1         1      2.74         0.00       2   
+n274                     1         1      2.74         0.00       2   
+n275                     1         1      2.74         0.00       2   
+n276                     1         1      7.71         0.00       2   
+n277                     1         1      2.74         0.00       2   
+n278                     1         1      2.74         0.00       2   
+n279                     1         1      2.74         0.00       2   
+n280                     1         1      7.88         0.00       2   
+n281                     1         1      2.74         0.00       2   
+n282                     1         1      7.88         0.00       2   
+n283                     1         1      7.88         0.00       2   
+n284                     1         1      7.43         0.00       2   
+n285                     1         1      2.74         0.00       2   
+n286                     1         1      2.74         0.00       2   
+n287                     1         1      2.74         0.00       2   
+n288                     1         1      2.74         0.00       2   
+n289                     1         1      2.74         0.00       2   
+n290                     1         1      2.74         0.00       2   
+n291                     1         1      2.74         0.00       2   
+n292                     1         1      2.74         0.00       2   
+n293                     1         1      2.74         0.00       2   
+n294                     1         1      2.74         0.00       2   
+n295                     1         1      2.74         0.00       2   
+n296                     1         1      2.74         0.00       2   
+n297                     1         1      2.74         0.00       2   
+n298                     1         1      2.74         0.00       2   
+n299                     1         1      2.74         0.00       2   
+n300                     1         1      2.74         0.00       2   
+n301                     1         1      2.74         0.00       2   
+n302                     1         1      2.74         0.00       2   
+n303                     1         1      2.74         0.00       2   
+n304                     1         1      2.74         0.00       2   
+n305                     1         1      2.74         0.00       2   
+n306                     1         1      2.74         0.00       2   
+n307                     1         1      2.74         0.00       2   
+n308                     1         1      2.74         0.00       2   
+n309                     1         1      2.74         0.00       2   
+n310                     1         1      2.74         0.00       2   
+n311                     1         1      2.74         0.00       2   
+n312                     1         1      2.74         0.00       2   
+n313                     1         1      2.74         0.00       2   
+n314                     1         1      2.74         0.00       2   
+n315                     1         1      2.74         0.00       2   
+n316                     1         1      2.74         0.00       2   
+n317                     1         1      2.74         0.00       2   
+n318                     1         1      2.74         0.00       2   
+n319                     1         1      2.74         0.00       2   
+n320                     1         1      2.74         0.00       2   
+n321                     1         1      2.74         0.00       2   
+n322                     1         1      2.74         0.00       2   
+n323                     1         1      7.88         0.00       2   
+n324                     1         1      2.74         0.00       2   
+n325                     1         1      2.74         0.00       2   
+n326                     1         1      2.74         0.00       2   
+n327                     1         1      2.74         0.00       2   
+n328                     1         1      2.74         0.00       2   
+n329                     1         1      2.74         0.00       2   
+n330                     1         1      2.74         0.00       2   
+n331                     1         1      7.88         0.00       2   
+n332                     1         1      2.74         0.00       2   
+n333                     1         1      2.74         0.00       2   
+n334                     1         1      7.88         0.00       2   
+n335                     1         1      2.74         0.00       2   
+n336                     1         1      2.74         0.00       2   
+n337                     1         1      2.74         0.00       2   
+n338                     1         1      2.74         0.00       2   
+n339                     1         1      7.88         0.00       2   
+n340                     1         1      2.74         0.00       2   
+n341                     1         1      2.74         0.00       2   
+n342                     1         1      7.88         0.00       2   
+n343                     1         1      7.88         0.00       2   
+n344                     1         1      2.74         0.00       2   
+n345                     1         1      7.88         0.00       2   
+n346                     1         1      7.88         0.00       2   
+n347                     1         1      7.43         0.00       2   
+n348                     1         1      2.74         0.00       2   
+n349                     1         1      2.74         0.00       2   
+n350                     1         1      2.74         0.00       2   
+n351                     1         1      2.74         0.00       2   
+n352                     1         1      2.74         0.00       2   
+n353                     1         1      2.74         0.00       2   
+n354                     1         1      2.74         0.00       2   
+n355                     1         1      2.74         0.00       2   
+n356                     1         1      2.74         0.00       2   
+n357                     1         1      2.74         0.00       2   
+n358                     1         1      2.74         0.00       2   
+n359                     1         1      2.74         0.00       2   
+n360                     1         1      2.74         0.00       2   
+n361                     1         1      2.74         0.00       2   
+n362                     1         1      2.74         0.00       2   
+n363                     1         1      2.74         0.00       2   
+n364                     1         1      2.74         0.00       2   
+n365                     1         1      2.74         0.00       2   
+n366                     1         1      2.74         0.00       2   
+n367                     1         1      2.74         0.00       2   
+n368                     1         1      2.74         0.00       2   
+n369                     1         1      2.74         0.00       2   
+n370                     1         1      2.74         0.00       2   
+n371                     1         1      2.74         0.00       2   
+n372                     1         1      2.74         0.00       2   
+n373                     1         1      2.74         0.00       2   
+n374                     1         1      2.74         0.00       2   
+n375                     1         1      2.74         0.00       2   
+n376                     1         1      2.74         0.00       2   
+n377                     1         1      2.74         0.00       2   
+n378                     1         1      2.74         0.00       2   
+n379                     1         1      2.74         0.00       2   
+n380                     1         1      2.74         0.00       2   
+n381                     1         1      2.74         0.00       2   
+n382                     1         1      2.74         0.00       2   
+n383                     1         1      2.74         0.00       2   
+n384                     1         1      2.74         0.00       2   
+n385                     1         1      2.74         0.00       2   
+n386                     1         1      2.74         0.00       2   
+n387                     1         1      2.74         0.00       2   
+n388                     1         1      2.74         0.00       2   
+n389                     1         1      2.74         0.00       2   
+n390                     1         1      2.74         0.00       2   
+n391                     1         1      2.74         0.00       2   
+n392                     1         1      2.74         0.00       2   
+n393                     1         1      2.74         0.00       2   
+n394                     1         1      2.74         0.00       2   
+n395                     1         1      2.74         0.00       2   
+n396                     1         1      2.74         0.00       2   
+n397                     1         1      2.74         0.00       2   
+n398                     1         1      2.74         0.00       2   
+n399                     1         1      2.74         0.00       2   
+n400                     1         1      2.74         0.00       2   
+n401                     1         1      2.74         0.00       2   
+n402                     1         1      2.74         0.00       2   
+n403                     1         1      2.74         0.00       2   
+n404                     1         1      2.74         0.00       2   
+n405                     1         1      2.74         0.00       2   
+n406                     1         1      2.74         0.00       2   
+n407                     1         1      2.74         0.00       2   
+n408                     1         1      2.74         0.00       2   
+n409                     1         1      2.74         0.00       2   
+n410                     1         1      2.74         0.00       2   
+n411                     1         1      2.74         0.00       2   
+n412                     1         1      2.74         0.00       2   
+n413                     1         1      2.74         0.00       2   
+n414                     1         1      2.74         0.00       2   
+n415                     6         1     64.09         0.00       7   
+n416                     1         1      7.14         0.00       2   
+n417                     1         1      8.07         0.00       2   
+n419                     1         1      3.70         0.00       2   
+n422                    11         1     75.46         0.00      12   
+n423                    11         1     76.27         0.00      12   
+n424                    12         1     86.53         0.00      13   
+n425                    12         1     79.49         0.00      13   
+n426                    33         1    308.33         0.00      34   
+n427                    92         1    501.22         0.00      93   
+n428                     1         1      3.70         0.00       2   
+n429                     1         1      3.70         0.00       2   
+n430                     1         1      3.70         0.00       2   
+n431                     1         1      3.70         0.00       2   
+n432                     1         1      3.70         0.00       2   
+n433                     1         1      3.70         0.00       2   
+n434                     1         1      3.70         0.00       2   
+n435                     1         1      3.70         0.00       2   
+n436                     1         1      3.70         0.00       2   
+n437                     1         1      3.70         0.00       2   
+n438                     1         1      3.70         0.00       2   
+n439                     1         1      3.70         0.00       2   
+n440                     1         1      3.70         0.00       2   
+n441                     1         1      3.70         0.00       2   
+n442                     1         1      8.59         0.00       2   
+n443                     1         1      8.59         0.00       2   
+n444                     1         1      8.59         0.00       2   
+n445                     1         1      8.59         0.00       2   
+n446                     1         1      3.70         0.00       2   
+n447                     1         1      3.70         0.00       2   
+n448                     1         1      3.70         0.00       2   
+n449                     1         1      3.70         0.00       2   
+n450                     1         1      8.59         0.00       2   
+n451                     1         1      8.59         0.00       2   
+n452                     1         1      3.70         0.00       2   
+n453                     1         1      3.70         0.00       2   
+n454                     1         1      3.70         0.00       2   
+n455                     1         1      3.70         0.00       2   
+n456                     1         1      3.70         0.00       2   
+n457                     1         1      3.70         0.00       2   
+n458                     1         1      3.70         0.00       2   
+n459                     1         1      9.49         0.00       2   
+n460                     1         1      9.38         0.00       2   
+n461                     1         1      7.94         0.00       2   
+n462                     1         1      9.38         0.00       2   
+n463                     1         1      7.94         0.00       2   
+n464                     1         1      9.38         0.00       2   
+n465                     1         1      7.94         0.00       2   
+n466                     1         1      9.38         0.00       2   
+n467                     1         1      7.94         0.00       2   
+n468                     1         1      9.38         0.00       2   
+n469                     1         1      7.94         0.00       2   
+n470                     1         1      9.38         0.00       2   
+n471                     1         1      7.94         0.00       2   
+n472                     1         1      9.38         0.00       2   
+n473                     1         1      7.94         0.00       2   
+n474                     1         1      9.38         0.00       2   
+n475                     1         1      7.94         0.00       2   
+n476                     1         1      9.38         0.00       2   
+n477                     1         1      7.94         0.00       2   
+n478                     1         1      9.38         0.00       2   
+n479                     1         1      7.94         0.00       2   
+n480                     1         1      9.38         0.00       2   
+n481                     1         1      7.94         0.00       2   
+n482                     1         1      9.38         0.00       2   
+n483                     1         1      7.94         0.00       2   
+n484                     1         1      9.38         0.00       2   
+n485                     1         1      7.94         0.00       2   
+n486                     1         1      9.38         0.00       2   
+n487                     1         1      7.94         0.00       2   
+n488                     1         1      9.38         0.00       2   
+n489                     1         1      7.94         0.00       2   
+n490                     1         1      9.38         0.00       2   
+n491                     1         1      7.94         0.00       2   
+n492                     1         1      9.38         0.00       2   
+n493                     1         1      7.94         0.00       2   
+n494                     1         1      9.38         0.00       2   
+n495                     1         1      7.94         0.00       2   
+n496                     1         1      9.38         0.00       2   
+n497                     1         1      7.94         0.00       2   
+n498                     1         1      9.38         0.00       2   
+n499                     1         1      7.94         0.00       2   
+n500                     1         1      9.38         0.00       2   
+n501                     1         1      7.94         0.00       2   
+n502                     1         1      9.38         0.00       2   
+n503                     1         1      7.94         0.00       2   
+n504                     1         1      3.99         0.00       2   
+n505                     1         1      3.78         0.00       2   
+n506                     1         1      9.38         0.00       2   
+n507                     1         1      7.94         0.00       2   
+n508                     1         1      3.99         0.00       2   
+n509                     1         1      3.78         0.00       2   
+n510                     1         1      3.99         0.00       2   
+n511                     1         1      3.70         0.00       2   
+n512                     1         1      3.99         0.00       2   
+n513                     1         1      3.70         0.00       2   
+n514                     1         1      3.99         0.00       2   
+n515                     1         1      3.70         0.00       2   
+n516                     1         1      3.99         0.00       2   
+n517                     1         1      3.70         0.00       2   
+n518                     1         1      3.99         0.00       2   
+n519                     2         1      9.78         0.00       3   
+n520                     1         1      9.38         0.00       2   
+n521                     1         1      7.94         0.00       2   
+n522                     1         1      3.99         0.00       2   
+n523                     1         1      3.71         0.00       2   
+n524                     3         1     34.79         0.00       4   
+n525                    62         1    440.09         0.00      63   
+n526                     3         1     28.33         0.00       4   
+n527                     7         1     58.79         0.00       8   
+n528                     3         1     34.92         0.00       4   
+n529                     2         1     18.82         0.00       3   
+n530                     2         1     19.05         0.00       3   
+n531                    62         1    407.37         0.00      63   
+n532                    30         1    279.99         0.00      31   
+n533                     1         1      9.97         0.00       2   
+n534                     2         1     19.04         0.00       3   
+n535                     2         1     17.09         0.00       3   
+n536                     1         1      3.70         0.00       2   
+n537                     4         1     38.03         0.00       5   
+n538                     1         1      3.70         0.00       2   
+n539                     1         1      3.70         0.00       2   
+n540                     1         1      3.70         0.00       2   
+n541                     1         1      3.70         0.00       2   
+n542                     1         1      3.70         0.00       2   
+n543                     1         1      3.70         0.00       2   
+n544                     1         1      3.70         0.00       2   
+n545                     1         1      3.70         0.00       2   
+n546                     1         1      3.70         0.00       2   
+n547                     1         1      3.70         0.00       2   
+n548                     1         1      3.70         0.00       2   
+n549                     1         1      3.70         0.00       2   
+n550                     1         1      3.70         0.00       2   
+n551                     1         1      3.70         0.00       2   
+n552                     1         1      3.70         0.00       2   
+n553                     1         1      3.70         0.00       2   
+n554                     1         1      3.70         0.00       2   
+n555                     1         1      3.70         0.00       2   
+n556                     1         1      3.70         0.00       2   
+n557                     1         1      3.70         0.00       2   
+n558                     1         1      3.70         0.00       2   
+n559                     1         1      3.70         0.00       2   
+n560                     1         1      3.70         0.00       2   
+n561                     1         1      3.70         0.00       2   
+n562                     1         1      3.70         0.00       2   
+n563                     1         1      3.70         0.00       2   
+n564                     1         1      3.70         0.00       2   
+n565                     1         1      3.70         0.00       2   
+n566                     1         1      3.70         0.00       2   
+n567                     2         1     13.25         0.00       3   
+prodt_end[0]             2         1      6.62         0.00       3   
+prodt_end[1]             3         1     25.70         0.00       4   
+prodt_end[2]             3         1     27.06         0.00       4   
+prodt_end[3]             3         1     27.06         0.00       4   
+prodt_end[4]             3         1     27.06         0.00       4   
+prodt_end[5]             3         1     27.06         0.00       4   
+prodt_end[6]             3         1     27.06         0.00       4   
+prodt_end[7]             3         1     27.06         0.00       4   
+prodt_end[8]             3         1     27.06         0.00       4   
+prodt_end[9]             3         1     27.06         0.00       4   
+prodt_end[10]            3         1     27.06         0.00       4   
+prodt_end[11]            3         1     27.06         0.00       4   
+prodt_end[12]            3         1     27.06         0.00       4   
+prodt_end[13]            3         1     27.06         0.00       4   
+prodt_end[14]            3         1     27.06         0.00       4   
+prodt_end[15]            3         1     27.06         0.00       4   
+prodt_end[16]            3         1     27.06         0.00       4   
+prodt_end[17]            3         1     27.06         0.00       4   
+prodt_end[18]            3         1     27.06         0.00       4   
+prodt_end[19]            3         1     27.06         0.00       4   
+prodt_end[20]            3         1     27.06         0.00       4   
+prodt_end[21]            3         1     27.06         0.00       4   
+prodt_end[22]            3         1     27.06         0.00       4   
+prodt_end[23]            3         1     27.06         0.00       4   
+prodt_end[24]            3         1     27.06         0.00       4   
+prodt_end[25]            3         1     27.06         0.00       4   
+prodt_end[26]            3         1     27.06         0.00       4   
+prodt_end[27]            3         1     27.06         0.00       4   
+prodt_end[28]            3         1     27.06         0.00       4   
+prodt_end[29]            3         1     27.06         0.00       4   
+prodt_end[30]            3         1     27.06         0.00       4   
+prodt_end[31]            3         1     18.84         0.00       4   
+prodt_end[32]            5         1     54.30         0.00       6   
+prodt_end[33]            5         1     29.12         0.00       6   
+prodt_end[34]            5         1     29.12         0.00       6   
+prodt_end[35]            5         1     35.65         0.00       6   
+prodt_end[36]            5         1     35.65         0.00       6   
+prodt_end[37]            5         1     35.65         0.00       6   
+prodt_end[38]            5         1     35.65         0.00       6   
+prodt_end[39]            5         1     28.77         0.00       6   
+prodt_end[40]            4         1     26.35         0.00       5   
+prodt_end[41]            5         1     35.65         0.00       6   
+prodt_end[42]            5         1     35.65         0.00       6   
+prodt_end[43]            5         1     28.77         0.00       6   
+prodt_end[44]            5         1     35.65         0.00       6   
+prodt_end[45]            5         1     35.30         0.00       6   
+prodt_end[46]            5         1     28.77         0.00       6   
+prodt_end[47]            5         1     33.52         0.00       6   
+prodt_end[48]            5         1     33.76         0.00       6   
+prodt_end[49]            5         1     33.52         0.00       6   
+prodt_end[50]            5         1     40.05         0.00       6   
+prodt_end[51]            5         1     33.52         0.00       6   
+prodt_end[52]            5         1     33.88         0.00       6   
+prodt_end[53]            5         1     33.52         0.00       6   
+prodt_end[54]            5         1     33.52         0.00       6   
+prodt_end[55]            5         1     33.52         0.00       6   
+prodt_end[56]            5         1     40.05         0.00       6   
+prodt_end[57]            5         1     33.52         0.00       6   
+prodt_end[58]            5         1     33.52         0.00       6   
+prodt_end[59]            5         1     33.52         0.00       6   
+prodt_end[60]            5         1     33.52         0.00       6   
+prodt_end[61]            5         1     33.52         0.00       6   
+prodt_end[62]            5         1     33.52         0.00       6   
+prodt_end[63]            5         1     33.61         0.00       6   
+prodt_end[64]            1         1      0.00         0.00       2   dr
+reset                    3         1     33.83         0.00       4   
+states[0]                4         1     35.62         0.00       5   
+states[1]                4         1     34.64         0.00       5   
+valid                    3         1     26.41         0.00       4   
+wcout                    1         1      8.79         0.00       2   
+wsum[0]                  1         1      4.11         0.00       2   
+wsum[1]                  1         1      4.11         0.00       2   
+wsum[2]                  1         1      4.11         0.00       2   
+wsum[3]                  1         1      4.11         0.00       2   
+wsum[4]                  1         1      4.11         0.00       2   
+wsum[5]                  1         1      4.11         0.00       2   
+wsum[6]                  1         1      4.11         0.00       2   
+wsum[7]                  1         1      4.11         0.00       2   
+wsum[8]                  1         1      4.11         0.00       2   
+wsum[9]                  1         1      4.11         0.00       2   
+wsum[10]                 1         1      4.11         0.00       2   
+wsum[11]                 1         1      4.11         0.00       2   
+wsum[12]                 1         1      4.11         0.00       2   
+wsum[13]                 1         1      4.11         0.00       2   
+wsum[14]                 1         1      4.11         0.00       2   
+wsum[15]                 1         1     10.06         0.00       2   
+wsum[16]                 1         1     10.06         0.00       2   
+wsum[17]                 1         1     10.06         0.00       2   
+wsum[18]                 1         1     10.06         0.00       2   
+wsum[19]                 1         1     10.06         0.00       2   
+wsum[20]                 1         1     10.06         0.00       2   
+wsum[21]                 1         1     10.06         0.00       2   
+wsum[22]                 1         1     10.06         0.00       2   
+wsum[23]                 1         1     10.06         0.00       2   
+wsum[24]                 1         1     10.06         0.00       2   
+wsum[25]                 1         1     10.06         0.00       2   
+wsum[26]                 1         1     10.06         0.00       2   
+wsum[27]                 1         1     10.06         0.00       2   
+wsum[28]                 1         1     10.06         0.00       2   
+wsum[29]                 1         1     10.06         0.00       2   
+wsum[30]                 1         1     10.06         0.00       2   
+wsum[31]                 1         1      8.79         0.00       2   
+--------------------------------------------------------------------------------
+Total 767 nets        1951       767  14764.75         0.00    2718
+Maximum                164         1    575.93         0.00     165
+Average               2.54      1.00     19.25         0.00    3.54
+1
+update_timing
+Information: Updating design information... (UID-85)
+1
+report_timing -max_paths 10
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 01:29:48 2016
+****************************************
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[47]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U38/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[16] (bit32)                                  0.00       5.22 f
+  U666/Z (CANR2X1)                                        0.25       5.47 r
+  U414/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[47]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[47]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[48]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U28/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[17] (bit32)                                  0.00       5.22 f
+  U673/Z (CANR2X1)                                        0.25       5.47 r
+  U415/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[48]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[48]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[49]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U29/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[18] (bit32)                                  0.00       5.22 f
+  U672/Z (CANR2X1)                                        0.25       5.47 r
+  U416/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[49]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[49]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[50]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U30/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[19] (bit32)                                  0.00       5.22 f
+  U671/Z (CANR2X1)                                        0.25       5.47 r
+  U417/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[50]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[50]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[55]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U27/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[24] (bit32)                                  0.00       5.22 f
+  U680/Z (CANR2X1)                                        0.25       5.47 r
+  U412/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[55]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[55]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[56]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U21/Z (CAOR2XL)                                    0.41       5.22 f
+  Ad32/sum32[25] (bit32)                                  0.00       5.22 f
+  U689/Z (CANR2X1)                                        0.25       5.47 r
+  U413/Z (COND1X1)                                        0.17       5.65 f
+  prodt_end_reg[56]/D (CFD1QX1)                           0.00       5.65 f
+  data arrival time                                                  5.65
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[56]/CP (CFD1QX1)                          0.00       6.00 r
+  library setup time                                     -0.35       5.65
+  data required time                                                 5.65
+  --------------------------------------------------------------------------
+  data required time                                                 5.65
+  data arrival time                                                 -5.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[51]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U25/Z (CAOR2X1)                                    0.32       5.13 f
+  Ad32/sum32[20] (bit32)                                  0.00       5.13 f
+  U670/Z (CANR2X1)                                        0.22       5.36 r
+  U464/Z (COND1XL)                                        0.18       5.53 f
+  prodt_end_reg[51]/D (CFD1QXL)                           0.00       5.53 f
+  data arrival time                                                  5.53
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[51]/CP (CFD1QXL)                          0.00       6.00 r
+  library setup time                                     -0.46       5.54
+  data required time                                                 5.54
+  --------------------------------------------------------------------------
+  data required time                                                 5.54
+  data arrival time                                                 -5.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[52]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U24/Z (CAOR2X1)                                    0.32       5.13 f
+  Ad32/sum32[21] (bit32)                                  0.00       5.13 f
+  U669/Z (CANR2X1)                                        0.22       5.36 r
+  U465/Z (COND1XL)                                        0.18       5.53 f
+  prodt_end_reg[52]/D (CFD1QXL)                           0.00       5.53 f
+  data arrival time                                                  5.53
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[52]/CP (CFD1QXL)                          0.00       6.00 r
+  library setup time                                     -0.46       5.54
+  data required time                                                 5.54
+  --------------------------------------------------------------------------
+  data required time                                                 5.54
+  data arrival time                                                 -5.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[53]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U23/Z (CAOR2X1)                                    0.32       5.13 f
+  Ad32/sum32[22] (bit32)                                  0.00       5.13 f
+  U668/Z (CANR2X1)                                        0.22       5.36 r
+  U466/Z (COND1XL)                                        0.18       5.53 f
+  prodt_end_reg[53]/D (CFD1QXL)                           0.00       5.53 f
+  data arrival time                                                  5.53
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[53]/CP (CFD1QXL)                          0.00       6.00 r
+  library setup time                                     -0.46       5.54
+  data required time                                                 5.54
+  --------------------------------------------------------------------------
+  data required time                                                 5.54
+  data arrival time                                                 -5.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: a_reg[8] (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: prodt_end_reg[54]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  a_reg[8]/CP (CFD1QX1)                                   0.00       0.00 r
+  a_reg[8]/Q (CFD1QX1)                                    0.41       0.41 r
+  Ad32/b32[8] (bit32)                                     0.00       0.41 r
+  Ad32/A321/b16[8] (bit16_0)                              0.00       0.41 r
+  Ad32/A321/U30/Z (CNIVX3)                                0.48       0.90 r
+  Ad32/A321/A163/b8[0] (bit8_14)                          0.00       0.90 r
+  Ad32/A321/A163/A81/b4[0] (bit4_56)                      0.00       0.90 r
+  Ad32/A321/A163/A81/A41/b2[0] (bit2_224)                 0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/b (Add_full_896)              0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/b (Add_half_1792)          0.00       0.90 r
+  Ad32/A321/A163/A81/A41/A1/M1/U5/Z (CIVX2)               0.11       1.01 f
+  Ad32/A321/A163/A81/A41/A1/M1/U3/Z (CND2X1)              0.07       1.09 r
+  Ad32/A321/A163/A81/A41/A1/M1/U4/Z (CND2X1)              0.13       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M1/sum (Add_half_1792)        0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/a (Add_half_1791)          0.00       1.21 f
+  Ad32/A321/A163/A81/A41/A1/M2/U2/Z (CAN2X1)              0.18       1.39 f
+  Ad32/A321/A163/A81/A41/A1/M2/c_out (Add_half_1791)      0.00       1.39 f
+  Ad32/A321/A163/A81/A41/A1/U1/Z (COR2X1)                 0.23       1.62 f
+  Ad32/A321/A163/A81/A41/A1/c_out (Add_full_896)          0.00       1.62 f
+  Ad32/A321/A163/A81/A41/U3/Z (CANR2X1)                   0.34       1.95 r
+  Ad32/A321/A163/A81/A41/U4/Z (CIVX2)                     0.12       2.07 f
+  Ad32/A321/A163/A81/A41/U8/Z (CAOR2X1)                   0.34       2.40 f
+  Ad32/A321/A163/A81/A41/c_out2 (bit2_224)                0.00       2.40 f
+  Ad32/A321/A163/A81/U3/Z (CANR2X1)                       0.36       2.77 r
+  Ad32/A321/A163/A81/U4/Z (CIVX2)                         0.13       2.90 f
+  Ad32/A321/A163/A81/U10/Z (CAOR2X1)                      0.34       3.24 f
+  Ad32/A321/A163/A81/c_out4 (bit4_56)                     0.00       3.24 f
+  Ad32/A321/A163/U3/Z (CANR2X1)                           0.31       3.54 r
+  Ad32/A321/A163/U4/Z (CNIVX1)                            0.26       3.81 r
+  Ad32/A321/A163/U14/Z (CAOR2X1)                          0.23       4.03 r
+  Ad32/A321/A163/c_out8 (bit8_14)                         0.00       4.03 r
+  Ad32/A321/U22/Z (CAOR2X1)                               0.20       4.23 r
+  Ad32/A321/c_out16 (bit16_0)                             0.00       4.23 r
+  Ad32/U4/Z (CND2X1)                                      0.09       4.33 f
+  Ad32/U20/Z (CAN2X2)                                     0.23       4.55 f
+  Ad32/U5/Z1 (CIVDX3)                                     0.26       4.81 f
+  Ad32/U22/Z (CAOR2X1)                                    0.32       5.13 f
+  Ad32/sum32[23] (bit32)                                  0.00       5.13 f
+  U667/Z (CANR2X1)                                        0.22       5.36 r
+  U467/Z (COND1XL)                                        0.18       5.53 f
+  prodt_end_reg[54]/D (CFD1QXL)                           0.00       5.53 f
+  data arrival time                                                  5.53
+
+  clock clock (rise edge)                                 6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  prodt_end_reg[54]/CP (CFD1QXL)                          0.00       6.00 r
+  library setup time                                     -0.46       5.54
+  data required time                                                 5.54
+  --------------------------------------------------------------------------
+  data required time                                                 5.54
+  data arrival time                                                 -5.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+report_area 
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 01:29:48 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:              133
+Number of nets:               767
+Number of cells:              634
+Number of references:          30
+
+Combinational area:       14626.000000
+Noncombinational area:     608.500000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          15234.500000
+Total area:                 undefined
+1
+#>> report_area.txt
+report_power 
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_BCCOM25'
+Loading db file '/apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25'
+Warning: Main library 'tc240c' does not specify the following unit required for power: 'Leakage Power'. (PWR-424)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sun May 15 01:29:49 2016
+****************************************
+
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+
+Operating Conditions: WCCOM25   Library: tc240c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 2.3  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = Unitless
+
+
+  Cell Internal Power  =  36.0726 mW   (81%)
+  Net Switching Power  =   8.6970 mW   (19%)
+                         ---------
+Total Dynamic Power    =  44.7697 mW  (100%)
+
+Cell Leakage Power     =   0.0000 
+
+1
+#>> report_power.txt
+write -hierarchy -format verilog -output seq_netlist.v
+Writing verilog file '/home/th/thak8616/Desktop/SMUL321/seq_netlist.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+quit
+
+Thank you...

@@ -1,0 +1,408 @@
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Mon May  9 15:53:56 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          31
+
+Combinational area:        463.000000
+Noncombinational area:     240.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:           703.000000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Mon May  9 16:37:56 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          31
+
+Combinational area:        463.000000
+Noncombinational area:     240.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:           703.000000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Mon May  9 17:59:45 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          31
+
+Combinational area:        463.000000
+Noncombinational area:     240.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:           703.000000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Tue May 10 15:21:21 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Wed May 11 00:57:03 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Wed May 11 01:03:08 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Wed May 11 18:25:08 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Wed May 11 19:12:33 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Wed May 11 19:13:28 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Fri May 13 10:51:43 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Fri May 13 11:07:13 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Fri May 13 11:12:29 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Fri May 13 17:19:44 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Fri May 13 17:20:31 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sat May 14 01:00:41 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               289
+Number of cells:              228
+Number of references:          32
+
+Combinational area:       1239.500000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1491.500000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sat May 14 01:03:57 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               311
+Number of cells:              248
+Number of references:          29
+
+Combinational area:       1251.000000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1503.000000
+Total area:                 undefined
+1
+ 
+****************************************
+Report : area
+Design : seq_adder
+Version: C-2009.06-SP5
+Date   : Sat May 14 14:03:03 2016
+****************************************
+
+Library(s) Used:
+
+    tc240c (File: /apps/toshiba/sjsu/synopsys/tc240c/tc240c.db_WCCOM25)
+
+Number of ports:               37
+Number of nets:               311
+Number of cells:              248
+Number of references:          29
+
+Combinational area:       1251.000000
+Noncombinational area:     252.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          1503.000000
+Total area:                 undefined
+1
